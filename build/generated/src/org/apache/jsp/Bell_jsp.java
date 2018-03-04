@@ -51,18 +51,16 @@ public final class Bell_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        \n");
-      out.write("        \n");
-      out.write("        <form name=\"myForm\" action=\"/BellServlet\" method=\"get\">\n");
-      out.write("            ");
-
-        String a = request.getParameter("tableNo");
-        request.setAttribute("tableNo", a);
-        
       out.write("\n");
+      out.write("\n");
+      out.write("        <form name=\"myForm\" action=\"BellServlet\" method=\"get\">\n");
+      out.write("            \n");
+      out.write("            <input type=\"hidden\" name=\"table\" value=\"");
+      out.print( request.getParameter("tableNo") );
+      out.write("\" />\n");
       out.write("            <input type =\"submit\" value=\"Call For Assistance\" name=\"submit\"/>\n");
-      out.write("            \n");
-      out.write("            \n");
+      out.write("\n");
+      out.write("\n");
       out.write("        </form>\n");
       out.write("    </body>\n");
       out.write("</html>\n");

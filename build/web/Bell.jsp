@@ -12,16 +12,14 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
-        
-        <form name="myForm" action="/BellServlet" method="get">
-            <%
-        String a = request.getParameter("tableNo");
-        request.setAttribute("tableNo", a);
-        %>
+
+
+        <form name="myForm" action="BellServlet" method="get">
+            
+            <input type="hidden" name="table" value="<%= request.getParameter("tableNo") %>" />
             <input type ="submit" value="Call For Assistance" name="submit"/>
-            
-            
+
+
         </form>
     </body>
 </html>

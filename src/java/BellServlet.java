@@ -70,9 +70,9 @@ public class BellServlet extends HttpServlet {
         String urlString = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s";
 
         String apiToken = "533265010:AAH5ORLjdspqoTLZxV_ubgiOe3Z76huSU2M";
-        String chatId = "@LongBeach_Bot";
-        String text = (String) request.getAttribute("tableNo");
-
+        String chatId = "-307387043";
+        String text = "Table " + request.getParameter("table") + " needs Assistance!";
+        
         urlString = String.format(urlString, apiToken, chatId, text);
 
         URL url = new URL(urlString);
